@@ -552,15 +552,25 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_65258"]
-radius = 5.0
+radius = 6.0
 
 [node name="player" type="CharacterBody2D"]
+position = Vector2(-518, 0)
 script = ExtResource("1_pwyog")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pt1yu")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_65258")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2, 0)
+zoom = Vector2(2.5, 2.5)
+limit_left = -1039
+limit_top = -419
+limit_right = -280
+limit_bottom = 141
